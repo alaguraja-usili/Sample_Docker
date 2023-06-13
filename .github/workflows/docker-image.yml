@@ -4,6 +4,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: Python:3.11.2
+    container: python:3.11.2
     steps:
-    - run: node --version
+    - run: python --version
