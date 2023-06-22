@@ -7,14 +7,13 @@ jobs:
     name: Run ubuntu machine
     runs-on: ubuntu-latest
     container: 
-	image: composer:latest
-	volumes:
-	 - ${{ github.workspace }}:/app
-steps:
-    
- - name: checkout the repo
-   uses: actions/checkout@v2
- - name: Running composer install
-	  run: composer install
- - name:Running Python
-	 run: python aps.py
+       image: composer:latest
+       volumes: 
+          - ${{ github.workspace }}:/app
+    steps:
+     - name: checkout the repo
+       uses: actions/checkout@v2
+     - name: Running composer install
+       run: composer install
+     - name: Running Python
+       run: python aps.py
